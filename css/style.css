@@ -1,0 +1,15 @@
+body{
+    background-color: #ffccff;
+}
+h1{
+    color:  #1a001a;
+    font-weight: bolder;
+    text-align: center;
+}
+p{
+    color: #4d0026;
+    font-family: Helvetica;
+    font-weight: bolder;
+    text-align: center;
+    
+}
