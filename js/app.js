@@ -83,27 +83,31 @@ function fifthQuestion() {
     } else {
         alert("answer yes or no, please " + userName);
     }
-   return favoriteColor();
+    return favoriteColor();
 }
 fifthQuestion();
 
-let number = 9;
+function sixthQuestion() {
 
-for (let i = 0; i <= 10; i++) {
-    let gussNumber = prompt("let's play; you should guss a number between 1 - 10");
-    if (gussNumber == number) {
-        alert("great job");
-        score++;
-        break;
+    let number = 9;
 
-    } else if (gussNumber > number) {
-        alert("too high" + userName);
-    } else if (gussNumber < number) {
-        alert("too low ");
+    for (let i = 0; i <= 10; i++) {
+        let gussNumber = prompt("let's play; you should guss a number between 1 - 10");
+        if (gussNumber == number) {
+            alert("great job");
+            score++;
+            break;
+
+        } else if (gussNumber > number) {
+            alert("too high" + userName);
+        } else if (gussNumber < number) {
+            alert("too low ");
+        }
     }
+     alert("the anwer is  " + number);
+     return gussNumber;
 }
-
-alert("the anwer is  " + number);
+sixthQuestion();
 
 let candes = ['coockis', 'caramels', 'chocolates', 'gummy'];
 let gussCandy = null;
