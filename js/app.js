@@ -83,16 +83,16 @@ function fifthQuestion() {
     } else {
         alert("answer yes or no, please " + userName);
     }
-    return favoriteColor();
+    return favoriteColor;
 }
 fifthQuestion();
 
 function sixthQuestion() {
 
     let number = 9;
-
+    let gussNumber = null;
     for (let i = 0; i <= 10; i++) {
-        let gussNumber = prompt("let's play; you should guss a number between 1 - 10");
+        gussNumber = prompt("let's play; you should guss a number between 1 - 10");
         if (gussNumber == number) {
             alert("great job");
             score++;
@@ -104,32 +104,42 @@ function sixthQuestion() {
             alert("too low ");
         }
     }
-     alert("the anwer is  " + number);
-     return gussNumber;
+    alert("the anwer is  " + number);
+    return gussNumber;
 }
 sixthQuestion();
 
-let candes = ['coockis', 'caramels', 'chocolates', 'gummy'];
-let gussCandy = null;
-hasCandy: for (let j = 0; j < candes.length; j++) {
-    gussCandy = prompt("guss what type of candy i prefer?");
+let candes = null;
+function seventhQuestion() {
 
-    for (let i = 0; i < candes.length; i++) {
-        console.log(candes[i]);
-
-
-        if (gussCandy === candes[i]) {
-            alert("That true");
-            score++;
-            break hasCandy;
-        }
-    }
-    if (gussCandy !== candes[i]) {
+    candes = ['coockis', 'caramels', 'chocolates', 'gummy'];
+    let gussCandy = null;
+    hasCandy: for (let j = 0; j < candes.length; j++) {
         gussCandy = prompt("guss what type of candy i prefer?");
 
+        for (let i = 0; i < candes.length; i++) {
+            console.log(candes[i]);
+
+
+            if (gussCandy === candes[i]) {
+                alert("That true");
+                score++;
+                break hasCandy;
+            }
+        }
+        if (gussCandy !== candes[i]) {
+            gussCandy = prompt("guss what type of candy i prefer?");
+
+        }
+
     }
+    return gussCandy;
+
+
 
 }
+seventhQuestion();
+
 alert("I like " + candes);
 alert("Nice to meet you " + userName + " you'r score is " + score);
 console.log(score);
