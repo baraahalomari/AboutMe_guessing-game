@@ -70,18 +70,22 @@ function fourthQuestion() {
 }
 fourthQuestion();
 
-let favoriteColor = prompt("Did you Know my favorite color?");
-favoriteColor = favoriteColor.toLowerCase();
-if (favoriteColor === "yes" || favoriteColor === "y") {
-    console.log("you gussed it is  purple")
-    alert("it is  purple that true " + userName);
-    score++;
-} else if (favoriteColor === "no" || favoriteColor === "n") {
-    console.log("it is purple " + userName)
-    alert("it is purple " + userName);
-} else {
-    alert("answer yes or no, please " + userName);
+function fifthQuestion() {
+    let favoriteColor = prompt("Did you Know my favorite color?");
+    favoriteColor = favoriteColor.toLowerCase();
+    if (favoriteColor === "yes" || favoriteColor === "y") {
+        console.log("you gussed it is  purple")
+        alert("it is  purple that true " + userName);
+        score++;
+    } else if (favoriteColor === "no" || favoriteColor === "n") {
+        console.log("it is purple " + userName)
+        alert("it is purple " + userName);
+    } else {
+        alert("answer yes or no, please " + userName);
+    }
+   return favoriteColor();
 }
+fifthQuestion();
 
 let number = 9;
 
