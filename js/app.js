@@ -53,18 +53,22 @@ function thirdQuestion() {
 }
 thirdQuestion();
 
-let favoriteHobby = prompt("Did you know what is my favorite hobby?");
-favoriteHobby = favoriteHobby.toLowerCase();
-if (favoriteHobby === "yes" || favoriteHobby === "y") {
-    console.log("you gussed it is  playing sport")
-    alert("that true it is  playing sport " + userName);
-    score++;
-} else if (favoriteHobby === "no" || favoriteHobby === "n") {
-    console.log("it is playing sport " + userName)
-    alert("it is playing sport" + userName);
-} else {
-    alert("answer yes or no, please " + userName);
+function fourthQuestion() {
+    let favoriteHobby = prompt("Did you know what is my favorite hobby?");
+    favoriteHobby = favoriteHobby.toLowerCase();
+    if (favoriteHobby === "yes" || favoriteHobby === "y") {
+        console.log("you gussed it is  playing sport")
+        alert("that true it is  playing sport " + userName);
+        score++;
+    } else if (favoriteHobby === "no" || favoriteHobby === "n") {
+        console.log("it is playing sport " + userName)
+        alert("it is playing sport" + userName);
+    } else {
+        alert("answer yes or no, please " + userName);
+    }
+    return favoriteHobby;
 }
+fourthQuestion();
 
 let favoriteColor = prompt("Did you Know my favorite color?");
 favoriteColor = favoriteColor.toLowerCase();
