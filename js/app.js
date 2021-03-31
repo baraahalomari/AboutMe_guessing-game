@@ -86,15 +86,25 @@ let number= 9;
 alert ("the anwer is  " + number);
 
 let candes=['coockis','caramels','chocolates','gummy'];
-for(let i=0 ; i<candes.length; i++){
-    let gussCandy=prompt("guss what type of candy i prefer?");
-    if(gussCandy===candes[i]){
-        alert("That true");
-        score++;
-        break;
-    }else {
-        alert("try again");
-}
+let gussCandy=null;
+hasCandy: for(let j=0; j<candes.length; j++){
+     gussCandy=prompt("guss what type of candy i prefer?");
+
+            for(let i=0 ; i<candes.length; i++){
+            console.log(candes[i]);
+    
+
+                    if(gussCandy===candes[i]){
+                    alert("That true");
+                    score++;
+                    break hasCandy; 
+                    }
+            } 
+        if (gussCandy!==candes[i]){
+        gussCandy=prompt("guss what type of candy i prefer?");
+
+    }
+
 }
 alert("I like "+ candes);
 alert("Nice to meet you "+ userName + " you'r score is "+ score);
