@@ -36,18 +36,22 @@ function secondQuestion() {
 }
 secondQuestion();
 
-let myAge = prompt("Did you Know my age?");
-myAge = myAge.toLocaleLowerCase();
-if (myAge === "yes" || myAge === "y") {
-    console.log("you gussed I'm 25 years old")
-    alert("you gussed I'm 25 years old" + userName);
-    score++;
-} else if (myAge === "no" || myAge === "n") {
-    console.log("I'm 25 years old " + userName)
-    alert("I'm 25 years old" + userName);
-} else {
-    alert("answer yes or no, please " + userName);
+function thirdQuestion() {
+    let myAge = prompt("Did you Know my age?");
+    myAge = myAge.toLocaleLowerCase();
+    if (myAge === "yes" || myAge === "y") {
+        console.log("you gussed I'm 25 years old")
+        alert("you gussed I'm 25 years old" + userName);
+        score++;
+    } else if (myAge === "no" || myAge === "n") {
+        console.log("I'm 25 years old " + userName)
+        alert("I'm 25 years old" + userName);
+    } else {
+        alert("answer yes or no, please " + userName);
+    }
+    return myAge;
 }
+thirdQuestion();
 
 let favoriteHobby = prompt("Did you know what is my favorite hobby?");
 favoriteHobby = favoriteHobby.toLowerCase();
