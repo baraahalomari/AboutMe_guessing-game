@@ -2,18 +2,22 @@
 let userName=prompt("what is your name?");
 alert ("Hello " +userName );
 let score=0;
-let universityDegree=prompt("Did you know what is my university degree?");
-universityDegree=universityDegree.toLowerCase();
-if (universityDegree=== "yes" || universityDegree==="y") {
-    console.log("you gussed it is a civil engineering")
-    alert ("you gussed it is a civil engineering" );
-    score++;
-} else if (universityDegree==="no" || universityDegree==="n"){
-console.log(" it is a civil engineering")
-alert ("it is a civil engineering " +userName );
-}else {
-    alert ("answer yes or no, please " +userName );
-}
+function firstQuestion(){
+    let universityDegree = prompt("Did you know what is my university degree?");
+    universityDegree = universityDegree.toLowerCase();
+    if (universityDegree === "yes" || universityDegree === "y") {
+        console.log("you gussed it is a civil engineering")
+        alert("you gussed it is a civil engineering");
+        score++;
+    } else if (universityDegree === "no" || universityDegree === "n") {
+        console.log(" it is a civil engineering")
+        alert("it is a civil engineering " + userName);
+    } else {
+        alert("answer yes or no, please " + userName);
+    }
+    return universityDegree;
+} 
+firstQuestion();
 
 let whereFrome=prompt("Did you know where I frome?");
 whereFrome=whereFrome.toLocaleLowerCase();
