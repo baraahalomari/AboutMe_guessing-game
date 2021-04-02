@@ -114,7 +114,7 @@ function seventhQuestion() {
 
     candes = ['coockis', 'caramels', 'chocolates', 'gummy'];
     let gussCandy = null;
-    hasCandy: for (let j = 0; j < candes.length; j++) {
+    hasCandy: for (let j = 0; j < 6; j++) {
         gussCandy = prompt("guss what type of candy i prefer?");
 
         for (let i = 0; i < candes.length; i++) {
@@ -122,14 +122,18 @@ function seventhQuestion() {
 
 
             if (gussCandy === candes[i]) {
-                alert("That true");
+                alert("That true" + candes);
                 score++;
+                j=6;
+
                 break hasCandy;
             }
         }
-        if (gussCandy !== candes[i]) {
-            gussCandy = prompt("guss what type of candy i prefer?");
+    if (j==5) {
+        alert  ('that wrong, I prefere ' + candes);
 
+        }else if (j<6) {
+            alert('this is wrong');
         }
 
     }
